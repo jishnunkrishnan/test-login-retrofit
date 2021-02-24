@@ -7,12 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.custom_course_listing.view.*
 
 //class CourseListAdapter(private val data: ResponseModel, private val context: Context, private val goToProduct: GoToProduct): RecyclerView.Adapter<CourseListAdapter.ViewHolder>() {
-class CourseListAdapter(private val data: ResponseModel, private val context: Context): RecyclerView.Adapter<CourseListAdapter.ViewHolder>() {
+class CourseListAdapter(private val data: ResponseModel, private val context: Context, private val goToCourse: GoToCourse): RecyclerView.Adapter<CourseListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
@@ -39,11 +40,11 @@ class CourseListAdapter(private val data: ResponseModel, private val context: Co
 
         holder.price.text = "₹ " + data.data?.get(position)?.course_price
 
-        /* Enabling Clicks on each grid layout */
-        /*holder.item.setOnClickListener {
+        // Enabling Clicks on each grid layout */
+        holder.item.setOnClickListener {
 
-            goToProduct.goToProduct(searchData.arrList?.get(position)?._id.toString())
-        }*/
+            goToCourse.goToCourseDetails(data.data?.get(position)?.id.toString())
+        }
     }
 
     override fun getItemCount(): Int { return data.data?.size!! }
@@ -56,10 +57,10 @@ class CourseListAdapter(private val data: ResponseModel, private val context: Co
         var tutorName: TextView = itemView.tutorName
         var like: TextView = itemView.tvLike
         var price: TextView = itemView.tvPrice
-        //val item: GridLayout = itemView.glProductList
+        val item: CardView = itemView.dealsCard
     }
 
-    interface GoToProduct {
-        fun goToProduct(productListModel: String)
+    interface GoToCourse {
+        fun goToCourseDetails(productListModel: String)
     }
 }

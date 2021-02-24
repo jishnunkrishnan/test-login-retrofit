@@ -52,13 +52,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvCourseTitle">
 
-            <ImageView
+
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/tutorImg"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginEnd="5dp"
-                android:foregroundGravity="center_vertical" />
-
+                android:foregroundGravity="center_vertical"/>
             <TextView
                 android:id="@+id/tutorName"
                 android:layout_width="match_parent"

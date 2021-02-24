@@ -5,5 +5,7 @@
     <string name="thousands_of_classes_to_fuel_your_creativity_and_career">Thousands of classes to fuel your creativity and career</string>
     <string name="enter_your_email">ENTER YOUR EMAIL</string>
     <string name="enter_your_password">ENTER YOUR PASSWORD</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
     <string name="sign_in">Sign In</string>
 </resources>
