@@ -23,6 +23,11 @@ import kotlinx.android.synthetic.main.activity_main.*
 const val RC_SIGN_IN = 100
 class MainActivity : AppCompatActivity() {
 
+    private fun goToCourse(){
+
+        startActivity(Intent(this, CourseListingActivity::class.java))
+    }
+    
     lateinit var callbackManager: CallbackManager
     private val EMAIL = "email"
 
@@ -56,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
                     if (email == defaultEmail && password == defaultPassword) {
 
-                        Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
+                        goToCourse()
                     } else {
 
                         Toast.makeText(this, "Invalid Credentials", Toast.LENGTH_SHORT).show()
@@ -87,6 +92,7 @@ class MainActivity : AppCompatActivity() {
                                         Log.i("Fb Data", obj.getString("name"))
                                         Log.i("Fb Data", obj.getString("email"))
                                         Log.i("Fb Data", obj.getString("picture"))
+                                        goToCourse()
                                     }
                                 } catch (e: Exception) {
 
@@ -140,6 +146,7 @@ class MainActivity : AppCompatActivity() {
                 val personId = acct.id
                 val personPhoto: Uri? = acct.photoUrl
                 Toast.makeText(this, personName, Toast.LENGTH_SHORT).show()
+                goToCourse()
             }
         } catch (e: ApiException) {
 
