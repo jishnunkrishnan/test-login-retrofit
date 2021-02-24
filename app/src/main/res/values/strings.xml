@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Test - Login &amp; Retrofit</string>
+    <string name="facebook_app_id">127633792588360</string>
+    <string name="fb_login_protocol_scheme">fb127633792588360</string>
 </resources>
