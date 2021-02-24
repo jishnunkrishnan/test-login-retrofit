@@ -2,4 +2,8 @@
     <string name="app_name">Test - Login &amp; Retrofit</string>
     <string name="facebook_app_id">127633792588360</string>
     <string name="fb_login_protocol_scheme">fb127633792588360</string>
+    <string name="thousands_of_classes_to_fuel_your_creativity_and_career">Thousands of classes to fuel your creativity and career</string>
+    <string name="enter_your_email">ENTER YOUR EMAIL</string>
+    <string name="enter_your_password">ENTER YOUR PASSWORD</string>
+    <string name="sign_in">Sign In</string>
 </resources>
